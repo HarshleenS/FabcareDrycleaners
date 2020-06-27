@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_home"
+        android:icon="@drawable/iconclothes"
+        android:title="Dashboard"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/action_rate"
+        android:icon="@drawable/iconrate"
+        android:title="Ratecard"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/action_chat"
+        android:icon="@drawable/iconchat"
+        android:title="Chat"
+        app:showAsAction="ifRoom"/>
+
+
+
+
+
+
+
+
+</menu>

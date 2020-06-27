@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="30dp"
+    tools:context=".Common.LoginSignup.EmailOrPhonePage">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/iconback"
+            android:id="@+id/goBackImage4" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose \nMethod"
+            android:textSize="30sp"
+            android:textAllCaps="true"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:textColor="#222777"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select one option from the following to get an OTP to reset your password"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:textColor="#595959"
+            />
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:background="#e6e6e6"
+            android:padding="5dp">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:id="@+id/mobileIcon"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/iconforphonesms"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:id="@+id/mobileTitle"
+                android:layout_marginTop="10dp"
+                android:textColor="#000000"
+                android:layout_toRightOf="@id/mobileIcon"
+                android:text="Via sms"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/mobileDes"
+                android:textColor="#595959"
+                android:text="+91-9876543210"
+                android:layout_marginBottom="10dp"
+                android:layout_toRightOf="@id/mobileIcon"
+                android:layout_below="@id/mobileTitle"
+                android:textSize="20sp"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#00000000"
+                android:id="@+id/btnPhoneForForgetPass"
+                 />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_marginTop="20dp"
+            android:background="#e6e6e6">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:id="@+id/emailIcon"
+                android:layout_height="35dp"
+                android:src="@drawable/iconforemail"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:id="@+id/emailTitle"
+                android:layout_marginTop="10dp"
+                android:textColor="#000000"
+                android:layout_toRightOf="@id/emailIcon"
+                android:text="Via Email"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/emailDes"
+                android:textColor="#595959"
+                android:text="example@gmail.com"
+                android:layout_marginBottom="10dp"
+                android:layout_toRightOf="@id/emailIcon"
+                android:layout_below="@id/emailTitle"
+                android:textSize="20sp"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#00000000"
+                android:id="@+id/btnEmailForForgetPass"
+                />
+
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+</ScrollView>

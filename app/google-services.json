@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1054250135501",
+    "firebase_url": "https://fabcare-drycleaners-6ce20.firebaseio.com",
+    "project_id": "fabcare-drycleaners-6ce20",
+    "storage_bucket": "fabcare-drycleaners-6ce20.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1054250135501:android:d5c322c683df879ac5de84",
+        "android_client_info": {
+          "package_name": "com.example.fabcaredrycleaners"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1054250135501-ej77hvug7ihloh8v8v3d6pjj6m6bo7il.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.fabcaredrycleaners",
+            "certificate_hash": "404711c4531bf9dec8d9810bc53b807c0841db1e"
+          }
+        },
+        {
+          "client_id": "1054250135501-pp6hdad8qllnbejpa724ih9n4gnp75p7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyABW9Au6Q75hEIEh1wL4TExUdmUHsPgX2g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1054250135501-pp6hdad8qllnbejpa724ih9n4gnp75p7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
