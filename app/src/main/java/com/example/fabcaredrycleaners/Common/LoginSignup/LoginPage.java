@@ -3,9 +3,16 @@ package com.example.fabcaredrycleaners.Common.LoginSignup;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
 import android.app.DownloadManager;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.net.wifi.p2p.WifiP2pManager;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -13,6 +20,8 @@ import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
+import com.example.fabcaredrycleaners.Databases.CheckInternet;
+import com.example.fabcaredrycleaners.LoginOrRegisterPage;
 import com.example.fabcaredrycleaners.R;
 import com.example.fabcaredrycleaners.User.HomePage;
 import com.google.android.material.textfield.TextInputLayout;
@@ -61,6 +70,7 @@ public class LoginPage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), ForgetPassword.class));
+                finish();
             }
         });
 
@@ -74,6 +84,24 @@ public class LoginPage extends AppCompatActivity {
     }
 
     public void letTheUserLogin(View view){
+
+        //check internet connectivity
+
+        CheckInternet checkInternet = new CheckInternet();
+        if (!checkInternet.isConnected(this)){
+            showCustomDialog();
+            return;
+        }
+
+//
+//        if(!isConnected(this)){
+//
+//            showCustomDialog();
+//
+//        }
+
+
+
         if(!validateFields()){
             return;
         }
@@ -105,6 +133,7 @@ public class LoginPage extends AppCompatActivity {
                         String phoneNumber = dataSnapshot.child(phoneNo).child("phoneNumber").getValue(String.class);
 
                         Toast.makeText(LoginPage.this, phoneNumber+"\n"+userName, Toast.LENGTH_SHORT).show();
+                        progressBar.setVisibility(View.GONE);
                         startActivity(new Intent(getApplicationContext(), HomePage.class));
 
                     }
@@ -129,6 +158,45 @@ public class LoginPage extends AppCompatActivity {
         });
 
     }
+
+    //check internet
+
+//    private boolean isConnected(LoginPage loginPage) {
+//
+//        ConnectivityManager connectivityManager = (ConnectivityManager) loginPage.getSystemService(Context.CONNECTIVITY_SERVICE);
+//
+//        NetworkInfo wifiConn= connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
+//        NetworkInfo mobileConn= connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
+//
+//        if((wifiConn != null && wifiConn.isConnected()) || (mobileConn != null && mobileConn.isConnected()) ){
+//            return true;
+//        }
+//        else{
+//            return false;
+//        }
+//    }
+
+    private void showCustomDialog() {
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(LoginPage.this);
+        builder.setMessage("Please make sure you have an active internet connection to proceed further")
+                .setCancelable(false)
+                .setPositiveButton("Connect", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        startActivity(new Intent(Settings.ACTION_WIFI_SETTINGS));
+                    }
+                })
+                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        startActivity(new Intent(getApplicationContext(), LoginOrRegisterPage.class));
+                        finish();
+                    }
+                });
+
+    }
+
 
     private boolean validateFields(){
         String phoneNoVal = phoneNumberLogin.getEditText().getText().toString();

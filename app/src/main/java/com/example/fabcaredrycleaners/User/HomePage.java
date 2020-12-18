@@ -30,8 +30,9 @@ import java.util.List;
     List<ImageSliderModel> imageSliderModelList;
 
     Button buttonGoBack, placeOrder;
+    Button btnCurrentDate, btnKalDate;
 
-    TextView currentDate, kalDate;
+    //TextView currentDate, kalDate;
 
 
     int timeHour, timeMinute;
@@ -51,6 +52,9 @@ import java.util.List;
         imageSliderModelList.add(new ImageSliderModel(R.drawable.slideimagefour));
 
         sliderView.setSliderAdapter(new imageSliderAdapter(HomePage.this, imageSliderModelList));
+
+        btnCurrentDate = findViewById(R.id.btn_current_date);
+        btnKalDate = findViewById(R.id.btn_kal_date);
 
         bottomNavigationView = findViewById(R.id.bottom_navigation_view);
         bottomNavigationView.setSelectedItemId(R.id.action_home);
@@ -82,20 +86,22 @@ import java.util.List;
             }
         });
 
-        currentDate=findViewById(R.id.currentDate);
-        kalDate=findViewById(R.id.kalDate);
+        //currentDate=findViewById(R.id.currentDate);
+        //kalDate=findViewById(R.id.kalDate);
 
 
         Calendar calendar=Calendar.getInstance();
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd-MMM");
         String dateTime = simpleDateFormat.format(calendar.getTime());
-        currentDate.setText("Today :" + " " + dateTime );
+        //currentDate.setText("Today :" + " " + dateTime );
+        btnCurrentDate.setText("Today :" + " " + dateTime);
 
         Calendar calendar2 = Calendar.getInstance();
         SimpleDateFormat simpleDateFormat2 = new SimpleDateFormat("dd-MMM");
         calendar2.add(Calendar.DAY_OF_YEAR, 1);
         String dateTime2 = simpleDateFormat2.format(calendar2.getTime());
-        kalDate.setText("Tomorrow :" + " " + dateTime2);
+        //kalDate.setText("Tomorrow :" + " " + dateTime2);
+        btnKalDate.setText("Tomorrow :" + " " + dateTime2);
 
         Calendar calendarTime = Calendar.getInstance();
         SimpleDateFormat simpleDateFormatTime = new SimpleDateFormat("kk:mm");
@@ -104,7 +110,7 @@ import java.util.List;
         timeHour = Integer.parseInt(timeParse[0]);
         timeMinute = Integer.parseInt(timeParse[1]);
 
-        currentDate.setOnClickListener(new View.OnClickListener() {
+        /*currentDate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(timeHour >= 19){
@@ -116,11 +122,34 @@ import java.util.List;
                     finish();
                 }
             }
+        });*/
+
+        btnCurrentDate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(timeHour >= 19){
+                    Toast.makeText(getApplicationContext(), "Cannot place order after 7pm", Toast.LENGTH_LONG).show();
+                }
+                else{
+                    Intent i = new Intent(HomePage.this, PlaceOrder.class);
+                    startActivity(i);
+                    finish();
+                }
+            }
         });
 
-        kalDate.setOnClickListener(new View.OnClickListener() {
+        /*kalDate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent i = new Intent(HomePage.this, PlaceOrder.class);
+                startActivity(i);
+                finish();
+            }
+        });*/
+
+        btnKalDate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
                 Intent i = new Intent(HomePage.this, PlaceOrder.class);
                 startActivity(i);
                 finish();

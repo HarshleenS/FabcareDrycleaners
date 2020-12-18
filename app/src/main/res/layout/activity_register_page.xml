@@ -6,7 +6,9 @@
     android:layout_height="match_parent"
     tools:context=".Common.LoginSignup.RegisterPage"
     android:background="#fff"
-    android:padding="30dp">
+    android:paddingTop="20dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,7 +18,7 @@
         <ImageView
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:src="@drawable/iconback"
+            android:src="@drawable/iconbacknew"
             android:id="@+id/goBackImage"
             android:onClick="goBackToLoginPage"/>
 
@@ -25,7 +27,7 @@
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_gravity="right"
-            android:src="@drawable/fclogowhite" />
+            android:src="@drawable/fbroundnewer" />
 
         <TextView
             android:id="@+id/text1"
@@ -39,17 +41,17 @@
             android:id="@+id/text2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="right"
+            android:layout_gravity="left"
+            android:layout_marginTop="10dp"
             android:text="Please enter all the details"
             android:textSize="18dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
             android:orientation="vertical"
-            android:padding="10dp">
+            >
 
 
 
@@ -137,7 +139,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:background="#8dd8f7"
+                android:background="#B9E7EA"
                 android:elevation="2dp"
                 android:onClick="callGetOtpScreen"
                 android:text="Proceed To Register"
@@ -149,10 +151,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:background="#222777"
+                android:background="#000000"
                 android:elevation="2dp"
                 android:text="Already a user? Login"
-                android:textColor="#f2f2f2"
+                android:textColor="#B9E7EA"
                 android:textSize="20dp" />
 
 

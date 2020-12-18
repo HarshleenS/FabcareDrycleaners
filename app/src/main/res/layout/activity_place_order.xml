@@ -6,4 +6,32 @@
     android:layout_height="match_parent"
     tools:context=".User.PlaceOrder">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Go back to home page"
+            android:id="@+id/btn_back_from_placeorder"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="We charge no delivery/pickup fee for orders above Rs.300"/>
+
+
+    </ScrollView>
+
+
+
+
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

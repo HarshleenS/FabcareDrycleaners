@@ -9,16 +9,37 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Common.LoginSignup.NewPasswordSuccessPage" android:parentActivityName=".Common.LoginSignup.LoginPage"></activity>
-        <activity android:name=".Common.LoginSignup.SetNewPassPage" android:parentActivityName=".Common.LoginSignup.EmailOrPhonePage"/>
-        <activity android:name=".Common.LoginSignup.EmailOrPhonePage" android:parentActivityName=".Common.LoginSignup.ForgetPassword"/>
-        <activity android:name=".Common.LoginSignup.ForgetPassword" android:parentActivityName=".Common.LoginSignup.LoginPage"/>
-        <activity android:name=".Common.LoginSignup.GetOtpPage" android:parentActivityName=".Common.LoginSignup.RegisterPage"/>
-        <activity android:name=".User.PlaceOrder" android:parentActivityName=".User.HomePage"/>
-        <activity android:name=".User.MyChat" android:parentActivityName=".User.HomePage"/>
-        <activity android:name=".User.RateCard" android:parentActivityName=".User.HomePage"/>
+        <activity android:name=".User.UserHomePage"></activity>
+        <activity android:name=".Common.LoginSignup.GetOtpForgotPass" />
+        <activity android:name=".LoginOrRegisterPage" />
+        <activity
+            android:name=".Common.LoginSignup.NewPasswordSuccessPage"
+            android:parentActivityName=".Common.LoginSignup.LoginPage" />
+        <activity
+            android:name=".Common.LoginSignup.SetNewPassPage"
+            android:parentActivityName=".Common.LoginSignup.EmailOrPhonePage" />
+        <activity
+            android:name=".Common.LoginSignup.EmailOrPhonePage"
+            android:parentActivityName=".Common.LoginSignup.ForgetPassword" />
+        <activity
+            android:name=".Common.LoginSignup.ForgetPassword"
+            android:parentActivityName=".Common.LoginSignup.LoginPage" />
+        <activity
+            android:name=".Common.LoginSignup.GetOtpPage"
+            android:parentActivityName=".Common.LoginSignup.RegisterPage" />
+        <activity
+            android:name=".User.PlaceOrder"
+            android:parentActivityName=".User.HomePage" />
+        <activity
+            android:name=".User.MyChat"
+            android:parentActivityName=".User.HomePage" />
+        <activity
+            android:name=".User.RateCard"
+            android:parentActivityName=".User.HomePage" />
         <activity android:name=".User.HomePage" />
-        <activity android:name=".Common.LoginSignup.RegisterPage" android:parentActivityName=".Common.LoginSignup.LoginPage"/>
+        <activity
+            android:name=".Common.LoginSignup.RegisterPage"
+            android:parentActivityName=".Common.LoginSignup.LoginPage" />
         <activity android:name=".Common.LoginSignup.LoginPage" />
         <activity android:name=".Common.SplashScreen">
             <intent-filter>

@@ -20,9 +20,6 @@ public class RegisterPage extends AppCompatActivity {
 
     TextInputLayout username, phoneNumberToSave, address, email, password;
 
-    //TextInputLayout
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,7 +58,6 @@ public class RegisterPage extends AppCompatActivity {
             return true;
         }
     }
-
 
     private boolean validatePhoneNumber(){
         String val= phoneNumberToSave.getEditText().getText().toString().trim();
@@ -134,7 +130,6 @@ public class RegisterPage extends AppCompatActivity {
         startActivity(i);
         finish();
     }
-
 
 
     public void callGetOtpScreen(View view){

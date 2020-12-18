@@ -5,8 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -15,6 +17,7 @@ import com.example.fabcaredrycleaners.R;
 import com.example.fabcaredrycleaners.User.HomePage;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.gms.tasks.TaskExecutors;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.FirebaseException;
 import com.google.firebase.FirebaseTooManyRequestsException;
@@ -35,12 +38,18 @@ public class GetOtpPage extends AppCompatActivity {
     Button buttonGetOtp, buttonOtpSubmit;
     FirebaseAuth mAuth;
     String codeSent;
-    String userName, phoneNumber, address, email, password;
+    String userName, phoneNumber, address, email, password, whatToDo;
+    RelativeLayout progressBarGetOtp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_get_otp_page);
+
+        progressBarGetOtp=findViewById(R.id.progressbarGetOtp);
+
+        //TRIAL
+
 
         phoneNoFromIntent=findViewById(R.id.phoneNumberFromIntent);
 
@@ -50,6 +59,8 @@ public class GetOtpPage extends AppCompatActivity {
         address = i.getStringExtra("address");
         email = i.getStringExtra("email");
         password = i.getStringExtra("password");
+        //whatToDo = i.getStringExtra("whatToDo");
+
 
 
         phoneNoFromIntent.setText("+91"+phoneNumber);
@@ -87,7 +98,14 @@ public class GetOtpPage extends AppCompatActivity {
             }
         });
 
+
     }
+
+
+
+
+
+
 
     public void getVerificationOtp(){
         String phoneNumber = phoneNoFromIntent.getText().toString();
@@ -139,12 +157,21 @@ public class GetOtpPage extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            storeNewUserData();
-                            Toast.makeText(getApplicationContext(), "Successfully registered", Toast.LENGTH_SHORT).show();
 
-                            startActivity(new Intent(GetOtpPage.this, HomePage.class));
+                            //CHECK WHAT TO DO
 
-                        } else {
+                            //if(whatToDo.equals("updateData")){
+                            //    updateOldUsersData();
+                            //}
+                            //else{
+                                storeNewUserData();
+                                Toast.makeText(GetOtpPage.this, "Successfully registered", Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(getApplicationContext(), HomePage.class));
+                            //}
+
+
+                        }
+                        else {
                             Toast.makeText(GetOtpPage.this, "Login Failed", Toast.LENGTH_SHORT).show();
 
                             if (task.getException() instanceof FirebaseAuthInvalidCredentialsException) {
@@ -155,6 +182,13 @@ public class GetOtpPage extends AppCompatActivity {
                     }
                 });
     }
+
+//    private void updateOldUsersData() {
+//        Intent intent = new Intent(getApplicationContext(), SetNewPassPage.class);
+//        intent.putExtra("phoneNumber", phoneNumber);
+//        startActivity(intent);
+//        finish();
+//    }
 
     private void storeNewUserData(){
         FirebaseDatabase rootNode = FirebaseDatabase.getInstance();

@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.fabcaredrycleaners.Common.LoginSignup.GetOtpPage;
@@ -16,11 +17,18 @@ public class EmailOrPhonePage extends AppCompatActivity {
 
     ImageView goBack;
     Button btnSelectPhone, btnSelectEmail;
+    TextView mobDes, emailDes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_email_or_phone_page);
+        mobDes = findViewById(R.id.mobileDes);
+        emailDes = findViewById(R.id.emailDes);
+
+        Intent in = getIntent();
+        String str = in.getStringExtra("phoneneeded");
+        emailDes.setText(str);
 
         goBack=findViewById(R.id.goBackImage4);
         btnSelectPhone=findViewById(R.id.btnPhoneForForgetPass);

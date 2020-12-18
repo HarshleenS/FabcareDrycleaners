@@ -4,19 +4,19 @@
 
     <item
         android:id="@+id/action_home"
-        android:icon="@drawable/iconclothes"
+        android:icon="@drawable/iconsclothesnew"
         android:title="Dashboard"
         app:showAsAction="ifRoom"/>
 
     <item
         android:id="@+id/action_rate"
-        android:icon="@drawable/iconrate"
+        android:icon="@drawable/iconspricenew"
         android:title="Ratecard"
         app:showAsAction="ifRoom"/>
 
     <item
         android:id="@+id/action_chat"
-        android:icon="@drawable/iconchat"
+        android:icon="@drawable/iconschatneww"
         android:title="Chat"
         app:showAsAction="ifRoom"/>
 
