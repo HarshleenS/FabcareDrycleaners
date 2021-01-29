@@ -62,6 +62,7 @@ public class LoginPage extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(LoginPage.this, RegisterPage.class);
                 startActivity(i);
+                overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
                 finish();
             }
         });
@@ -70,6 +71,7 @@ public class LoginPage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), ForgetPassword.class));
+                overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
                 finish();
             }
         });
@@ -135,6 +137,7 @@ public class LoginPage extends AppCompatActivity {
                         Toast.makeText(LoginPage.this, phoneNumber+"\n"+userName, Toast.LENGTH_SHORT).show();
                         progressBar.setVisibility(View.GONE);
                         startActivity(new Intent(getApplicationContext(), HomePage.class));
+                        overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
 
                     }
                     else{
@@ -185,12 +188,14 @@ public class LoginPage extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         startActivity(new Intent(Settings.ACTION_WIFI_SETTINGS));
+                        overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
                     }
                 })
                 .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         startActivity(new Intent(getApplicationContext(), LoginOrRegisterPage.class));
+                        overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
                         finish();
                     }
                 });

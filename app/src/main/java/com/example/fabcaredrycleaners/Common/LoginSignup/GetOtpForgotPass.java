@@ -162,17 +162,9 @@ public class GetOtpForgotPass extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(), SetNewPassPage.class);
         intent.putExtra("phoneNumber", phoneNumberFG);
         startActivity(intent);
+        overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
         finish();
     }
-
-
-
-
-
-
-
-
-
 
 
 
@@ -183,6 +175,7 @@ public class GetOtpForgotPass extends AppCompatActivity {
     public void goBackToRegPageForForgot(View view){
         Intent i = new Intent(getApplicationContext(), RegisterPage.class);
         startActivity(i);
+        overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
         finish();
     }
 

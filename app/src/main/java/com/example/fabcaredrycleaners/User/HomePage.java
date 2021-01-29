@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import com.example.fabcaredrycleaners.Common.LoginSignup.LoginPage;
 import com.example.fabcaredrycleaners.ImageSliderModel;
+import com.example.fabcaredrycleaners.PlaceOrderCard;
 import com.example.fabcaredrycleaners.R;
 import com.example.fabcaredrycleaners.imageSliderAdapter;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -133,6 +134,7 @@ import java.util.List;
                 else{
                     Intent i = new Intent(HomePage.this, PlaceOrder.class);
                     startActivity(i);
+                    overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
                     finish();
                 }
             }
@@ -152,6 +154,7 @@ import java.util.List;
             public void onClick(View view) {
                 Intent i = new Intent(HomePage.this, PlaceOrder.class);
                 startActivity(i);
+                overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
                 finish();
             }
         });
@@ -161,6 +164,7 @@ import java.util.List;
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(), LoginPage.class);
+                overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
                 startActivity(i);
             }
         });
@@ -172,7 +176,11 @@ import java.util.List;
     }
 
     public void placeOrderTesting(View view){
+
         placeOrder.setBackgroundColor(000000);
+        startActivity(new Intent(getApplicationContext(), PlaceOrderCard.class));
+        overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+
     }
 
 }

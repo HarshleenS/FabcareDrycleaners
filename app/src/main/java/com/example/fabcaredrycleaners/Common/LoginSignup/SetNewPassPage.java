@@ -77,6 +77,7 @@ public class SetNewPassPage extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         startActivity(new Intent(getApplicationContext(), LoginPage.class));
+                        overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
                         finish();
                     }
                 });
@@ -116,6 +117,7 @@ public class SetNewPassPage extends AppCompatActivity {
         Toast.makeText(this, "Password reset successful. Login again using new password", Toast.LENGTH_SHORT).show();
 
         startActivity(new Intent(getApplicationContext(), LoginPage.class));
+        overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
         finish();
 
 

@@ -38,6 +38,7 @@ public class EmailOrPhonePage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), ForgetPassword.class));
+                overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
             }
         });
 

@@ -26,6 +26,7 @@ public class LoginOrRegisterPage extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getApplicationContext(), LoginPage.class));
+                overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
             }
         });
 
@@ -33,6 +34,7 @@ public class LoginOrRegisterPage extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getApplicationContext(), RegisterPage.class));
+                overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
             }
         });
 

@@ -140,6 +140,7 @@ public class ForgetPassword extends AppCompatActivity {
                         intent.putExtra("phoneNumber", phoneString);
                         //intent.putExtra("whatToDo", "updateData");
                         startActivity(intent);
+                        overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
                         finish();
 
                         progressBarForgotpass.setVisibility(View.GONE);
@@ -185,6 +186,7 @@ public class ForgetPassword extends AppCompatActivity {
     public void goBackMethod(View view){
         Intent intent = new Intent(getApplicationContext(), LoginPage.class);
         startActivity(intent);
+        overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
     }
 
 

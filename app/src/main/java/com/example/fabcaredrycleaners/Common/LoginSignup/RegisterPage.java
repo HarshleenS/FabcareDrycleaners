@@ -41,6 +41,7 @@ public class RegisterPage extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(RegisterPage.this, LoginPage.class);
                 startActivity(i);
+                overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
             }
         });
 
@@ -128,6 +129,7 @@ public class RegisterPage extends AppCompatActivity {
     public void goBackToLoginPage(View view){
         Intent i =new Intent(getApplicationContext(), LoginPage.class);
         startActivity(i);
+        overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
         finish();
     }
 
@@ -152,6 +154,7 @@ public class RegisterPage extends AppCompatActivity {
         i.putExtra("email", emailString);
         i.putExtra("password", passwordString);
         startActivity(i);
+        overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
     }
 
 

@@ -1,0 +1,1418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PlaceOrderCard"
+    android:orientation="vertical"
+    android:background="#333333">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutUpar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="75dp"
+        android:background="#ffffff"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+<!--        <ImageView-->
+<!--            android:layout_width="80dp"-->
+<!--            android:layout_height="80dp"-->
+<!--            android:src="@drawable/iconlinesmeny"-->
+<!--            android:layout_marginRight="3dp"-->
+<!--            android:layout_marginBottom="3dp"-->
+<!--            app:layout_constraintRight_toRightOf="parent"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            android:background="#ffffff"/>-->
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <!-- LAY OUT FOR STUFF LIST-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:background="@android:color/darker_gray"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="DRYCLEAN"
+                        android:textSize="25sp"
+                        android:textColor="#000000"
+                        android:layout_marginBottom="5dp"
+                        android:textColorHighlight="@color/colorPrimary"
+                        android:gravity="center_horizontal"
+                        android:background="@color/colorPrimary"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:text="info that we need for this kajdifjaois ioasdn faisdf oiashd fihasoidfj oaihsdf "
+                        android:paddingRight="10dp"
+                        android:paddingLeft="10dp"/>
+
+                    <!-- SMALL COMPONENTS = INDIVIDUAL ITEMS -->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="1dp"
+                            android:layout_marginBottom="1dp">
+
+                            <TextView
+                                android:id="@+id/text_shirt_1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="SHIRT"
+                                android:textSize="20dp"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintLeft_toLeftOf="parent"/>
+
+                            <TextView
+                                android:id="@+id/cost_shirt_1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" ₹120"
+                                android:textSize="15dp"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/text_shirt_1" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent">
+
+                                <ImageView
+                                    android:id="@+id/image_minus_shirt_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/iconsubtractmath"
+                                    android:onClick="MinusShirt1"/>
+                                <TextView
+                                    android:id="@+id/number_shirt_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="0"
+                                    android:layout_marginRight="40dp"
+                                    android:layout_marginLeft="40dp"
+                                    android:textSize="25dp"/>
+                                <ImageView
+                                    android:id="@+id/image_plus_shirt_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/iconplusmath"
+                                    android:onClick="PlusShirt1"/>
+
+                            </LinearLayout>
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="1dp"
+                            android:layout_marginBottom="1dp">
+
+                            <TextView
+                                android:id="@+id/text_tshirt_1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="T-SHIRT"
+                                android:textSize="20dp"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintLeft_toLeftOf="parent"/>
+
+                            <TextView
+                                android:id="@+id/cost_tshirt_1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" ₹120"
+                                android:textSize="15dp"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/text_tshirt_1" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent">
+
+                                <ImageView
+                                    android:id="@+id/image_minus_tshirt_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/iconsubtractmath"
+                                    android:onClick="MinusTshirt1"/>
+                                <TextView
+                                    android:id="@+id/number_tshirt_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="0"
+                                    android:layout_marginRight="40dp"
+                                    android:layout_marginLeft="40dp"
+                                    android:textSize="25dp"/>
+                                <ImageView
+                                    android:id="@+id/image_plus_tshirt_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/iconplusmath"
+                                    android:onClick="PlusTshirt1"/>
+
+                            </LinearLayout>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="1dp"
+                            android:layout_marginBottom="1dp">
+
+                            <TextView
+                                android:id="@+id/text_trousers_1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="TROUSERS"
+                                android:textSize="20dp"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintLeft_toLeftOf="parent"/>
+
+                            <TextView
+                                android:id="@+id/cost_trousers_1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" ₹120"
+                                android:textSize="15dp"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/text_trousers_1" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent">
+
+                                <ImageView
+                                    android:id="@+id/image_minus_trousers_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/iconsubtractmath"
+                                    android:onClick="MinusTrousers1"/>
+                                <TextView
+                                    android:id="@+id/number_trousers_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="0"
+                                    android:layout_marginRight="40dp"
+                                    android:layout_marginLeft="40dp"
+                                    android:textSize="25dp"/>
+                                <ImageView
+                                    android:id="@+id/image_plus_trousers_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/iconplusmath"
+                                    android:onClick="PlusTrousers1"/>
+
+                            </LinearLayout>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="1dp"
+                            android:layout_marginBottom="1dp">
+
+                            <TextView
+                                android:id="@+id/text_denimjeans_1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="DENIM JEANS"
+                                android:textSize="20dp"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintLeft_toLeftOf="parent"/>
+
+                            <TextView
+                                android:id="@+id/cost_denimjeans_1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" ₹120"
+                                android:textSize="15dp"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/text_denimjeans_1" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent">
+
+                                <ImageView
+                                    android:id="@+id/image_minus_denimjeans_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/iconsubtractmath"
+                                    android:onClick="MinusJeans1"/>
+                                <TextView
+                                    android:id="@+id/number_denimjeans_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="0"
+                                    android:layout_marginRight="40dp"
+                                    android:layout_marginLeft="40dp"
+                                    android:textSize="25dp"/>
+                                <ImageView
+                                    android:id="@+id/image_plus_denimjeans_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/iconplusmath"
+                                    android:onClick="PlusJeans1"/>
+
+                            </LinearLayout>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="1dp"
+                            android:layout_marginBottom="1dp">
+
+                            <TextView
+                                android:id="@+id/text_formalsuit_1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="FORMAL SUIT"
+                                android:textSize="20dp"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintLeft_toLeftOf="parent"/>
+
+                            <TextView
+                                android:id="@+id/cost_formalsuit_1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" ₹120"
+                                android:textSize="15dp"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/text_formalsuit_1" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent">
+
+                                <ImageView
+                                    android:id="@+id/image_minus_formalsuit_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/iconsubtractmath"
+                                    android:onClick="MinusSuit1"/>
+                                <TextView
+                                    android:id="@+id/number_formalsuit_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="0"
+                                    android:layout_marginRight="40dp"
+                                    android:layout_marginLeft="40dp"
+                                    android:textSize="25dp"/>
+                                <ImageView
+                                    android:id="@+id/image_plus_formalsuit_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/iconplusmath"
+                                    android:onClick="PlusSuit1"/>
+
+                            </LinearLayout>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="1dp"
+                            android:layout_marginBottom="1dp">
+
+                            <TextView
+                                android:id="@+id/text_saree_1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="SAREE"
+                                android:textSize="20dp"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintLeft_toLeftOf="parent"/>
+
+                            <TextView
+                                android:id="@+id/cost_saree_1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" ₹120"
+                                android:textSize="15dp"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/text_saree_1" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent">
+
+                                <ImageView
+                                    android:id="@+id/image_minus_saree_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/iconsubtractmath"
+                                    android:onClick="MinusSaree1"/>
+                                <TextView
+                                    android:id="@+id/number_saree_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="0"
+                                    android:layout_marginRight="40dp"
+                                    android:layout_marginLeft="40dp"
+                                    android:textSize="25dp"/>
+                                <ImageView
+                                    android:id="@+id/image_plus_saree_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/iconplusmath"
+                                    android:onClick="PlusSaree1"/>
+
+                            </LinearLayout>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:background="@android:color/darker_gray"
+                        android:layout_marginTop="20dp"/>
+
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="STEAM IRON"
+                        android:textSize="25sp"
+                        android:textColor="#000000"
+                        android:layout_marginBottom="5dp"
+                        android:textColorHighlight="@color/colorPrimary"
+                        android:gravity="center_horizontal"
+                        android:background="@color/colorPrimary"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:text="info that we need for this kajdifjaois ioasdn faisdf oiashd fihasoidfj oaihsdf "
+                        android:paddingRight="10dp"
+                        android:paddingLeft="10dp"/>
+
+                    <!-- SMALL COMPONENTS = INDIVIDUAL ITEMS -->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="1dp"
+                            android:layout_marginBottom="1dp">
+
+                            <TextView
+                                android:id="@+id/text_shirt_2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="SHIRT"
+                                android:textSize="20dp"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintLeft_toLeftOf="parent"/>
+
+                            <TextView
+                                android:id="@+id/cost_shirt_2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" ₹120"
+                                android:textSize="15dp"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/text_shirt_2" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent">
+
+                                <ImageView
+                                    android:id="@+id/image_minus_shirt_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/iconsubtractmath"
+                                    android:onClick="MinusShirt2"/>
+                                <TextView
+                                    android:id="@+id/number_shirt_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="0"
+                                    android:layout_marginRight="40dp"
+                                    android:layout_marginLeft="40dp"
+                                    android:textSize="25dp"/>
+                                <ImageView
+                                    android:id="@+id/image_plus_shirt_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/iconplusmath"
+                                    android:onClick="PlusShirt2"/>
+
+                            </LinearLayout>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="1dp"
+                            android:layout_marginBottom="1dp">
+
+                            <TextView
+                                android:id="@+id/text_tshirt_2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="T-SHIRT"
+                                android:textSize="20dp"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintLeft_toLeftOf="parent"/>
+
+                            <TextView
+                                android:id="@+id/cost_tshirt_2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" ₹120"
+                                android:textSize="15dp"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/text_tshirt_2" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent">
+
+                                <ImageView
+                                    android:id="@+id/image_minus_tshirt_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/iconsubtractmath"
+                                    android:onClick="MinusTshirt2"/>
+                                <TextView
+                                    android:id="@+id/number_tshirt_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="0"
+                                    android:layout_marginRight="40dp"
+                                    android:layout_marginLeft="40dp"
+                                    android:textSize="25dp"/>
+                                <ImageView
+                                    android:id="@+id/image_plus_tshirt_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/iconplusmath"
+                                    android:onClick="PlusTshirt2"/>
+
+                            </LinearLayout>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="1dp"
+                            android:layout_marginBottom="1dp">
+
+                            <TextView
+                                android:id="@+id/text_trousers_2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="TROUSERS"
+                                android:textSize="20dp"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintLeft_toLeftOf="parent"/>
+
+                            <TextView
+                                android:id="@+id/cost_trousers_2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" ₹120"
+                                android:textSize="15dp"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/text_trousers_2" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent">
+
+                                <ImageView
+                                    android:id="@+id/image_minus_trousers_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/iconsubtractmath"
+                                    android:onClick="MinusTrousers2"/>
+                                <TextView
+                                    android:id="@+id/number_trousers_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="0"
+                                    android:layout_marginRight="40dp"
+                                    android:layout_marginLeft="40dp"
+                                    android:textSize="25dp"/>
+                                <ImageView
+                                    android:id="@+id/image_plus_trousers_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/iconplusmath"
+                                    android:onClick="PlusTrousers2"/>
+
+                            </LinearLayout>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="1dp"
+                            android:layout_marginBottom="1dp">
+
+                            <TextView
+                                android:id="@+id/text_denimjeans_2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="DENIM JEANS"
+                                android:textSize="20dp"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintLeft_toLeftOf="parent"/>
+
+                            <TextView
+                                android:id="@+id/cost_denimjeans_2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" ₹120"
+                                android:textSize="15dp"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/text_denimjeans_2" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent">
+
+                                <ImageView
+                                    android:id="@+id/image_minus_denimjeans_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/iconsubtractmath"
+                                    android:onClick="MinusJeans2"/>
+                                <TextView
+                                    android:id="@+id/number_denimjeans_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="0"
+                                    android:layout_marginRight="40dp"
+                                    android:layout_marginLeft="40dp"
+                                    android:textSize="25dp"/>
+                                <ImageView
+                                    android:id="@+id/image_plus_denimjeans_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/iconplusmath"
+                                    android:onClick="PlusJeans2"/>
+
+                            </LinearLayout>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="1dp"
+                            android:layout_marginBottom="1dp">
+
+                            <TextView
+                                android:id="@+id/text_formalsuit_2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="FORMAL SUIT"
+                                android:textSize="20dp"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintLeft_toLeftOf="parent"/>
+
+                            <TextView
+                                android:id="@+id/cost_formalsuit_2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" ₹120"
+                                android:textSize="15dp"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/text_formalsuit_2" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent">
+
+                                <ImageView
+                                    android:id="@+id/image_minus_formalsuit_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/iconsubtractmath"
+                                    android:onClick="MinusSuit2"/>
+                                <TextView
+                                    android:id="@+id/number_formalsuit_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="0"
+                                    android:layout_marginRight="40dp"
+                                    android:layout_marginLeft="40dp"
+                                    android:textSize="25dp"/>
+                                <ImageView
+                                    android:id="@+id/image_plus_formalsuit_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/iconplusmath"
+                                    android:onClick="PlusSuit2"/>
+
+                            </LinearLayout>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="1dp"
+                            android:layout_marginBottom="1dp">
+
+                            <TextView
+                                android:id="@+id/text_saree_2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="SAREE"
+                                android:textSize="20dp"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintLeft_toLeftOf="parent"/>
+
+                            <TextView
+                                android:id="@+id/cost_saree_2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" ₹120"
+                                android:textSize="15dp"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/text_saree_2" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent">
+
+                                <ImageView
+                                    android:id="@+id/image_minus_saree_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/iconsubtractmath"
+                                    android:onClick="MinusSaree2"/>
+                                <TextView
+                                    android:id="@+id/number_saree_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="0"
+                                    android:layout_marginRight="40dp"
+                                    android:layout_marginLeft="40dp"
+                                    android:textSize="25dp"/>
+                                <ImageView
+                                    android:id="@+id/image_plus_saree_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/iconplusmath"
+                                    android:onClick="PlusSaree2"/>
+
+                            </LinearLayout>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@android:color/darker_gray"/>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="STARCH POLISH"
+                        android:textSize="25sp"
+                        android:textColor="#000000"
+                        android:layout_marginBottom="5dp"
+                        android:textColorHighlight="@color/colorPrimary"
+                        android:gravity="center_horizontal"
+                        android:background="@color/colorPrimary"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:text="info that we need for this kajdifjaois ioasdn faisdf oiashd fihasoidfj oaihsdf "
+                        android:paddingRight="10dp"
+                        android:paddingLeft="10dp"/>
+
+                    <!-- SMALL COMPONENTS = INDIVIDUAL ITEMS -->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="1dp"
+                            android:layout_marginBottom="1dp">
+
+                            <TextView
+                                android:id="@+id/text_shirt_3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="SHIRT"
+                                android:textSize="20dp"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintLeft_toLeftOf="parent"/>
+
+                            <TextView
+                                android:id="@+id/cost_shirt_3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" ₹120"
+                                android:textSize="15dp"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/text_shirt_3" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent">
+
+                                <ImageView
+                                    android:id="@+id/image_minus_shirt_3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/iconsubtractmath"
+                                    android:onClick="MinusShirt3"/>
+                                <TextView
+                                    android:id="@+id/number_shirt_3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="0"
+                                    android:layout_marginRight="40dp"
+                                    android:layout_marginLeft="40dp"
+                                    android:textSize="25dp"/>
+                                <ImageView
+                                    android:id="@+id/image_plus_shirt_3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/iconplusmath"
+                                    android:onClick="PlusShirt3"/>
+
+                            </LinearLayout>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="1dp"
+                            android:layout_marginBottom="1dp">
+
+                            <TextView
+                                android:id="@+id/text_tshirt_3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="T-SHIRT"
+                                android:textSize="20dp"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintLeft_toLeftOf="parent"/>
+
+                            <TextView
+                                android:id="@+id/cost_tshirt_3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" ₹120"
+                                android:textSize="15dp"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/text_tshirt_3" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent">
+
+                                <ImageView
+                                    android:id="@+id/image_minus_tshirt_3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/iconsubtractmath"
+                                    android:onClick="MinusTshirt3"/>
+                                <TextView
+                                    android:id="@+id/number_tshirt_3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="0"
+                                    android:layout_marginRight="40dp"
+                                    android:layout_marginLeft="40dp"
+                                    android:textSize="25dp"/>
+                                <ImageView
+                                    android:id="@+id/image_plus_tshirt_3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/iconplusmath"
+                                    android:onClick="PlusTshirt3"/>
+
+                            </LinearLayout>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="1dp"
+                            android:layout_marginBottom="1dp">
+
+                            <TextView
+                                android:id="@+id/text_trousers_3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="TROUSERS"
+                                android:textSize="20dp"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintLeft_toLeftOf="parent"/>
+
+                            <TextView
+                                android:id="@+id/cost_trousers_3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" ₹120"
+                                android:textSize="15dp"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/text_trousers_3" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent">
+
+                                <ImageView
+                                    android:id="@+id/image_minus_trousers_3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/iconsubtractmath"
+                                    android:onClick="MinusTrousers3"/>
+                                <TextView
+                                    android:id="@+id/number_trousers_3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="0"
+                                    android:layout_marginRight="40dp"
+                                    android:layout_marginLeft="40dp"
+                                    android:textSize="25dp"/>
+                                <ImageView
+                                    android:id="@+id/image_plus_trousers_3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/iconplusmath"
+                                    android:onClick="PlusTrousers3"/>
+
+                            </LinearLayout>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="1dp"
+                            android:layout_marginBottom="1dp">
+
+                            <TextView
+                                android:id="@+id/text_denimjeans_3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="DENIM JEANS"
+                                android:textSize="20dp"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintLeft_toLeftOf="parent"/>
+
+                            <TextView
+                                android:id="@+id/cost_denimjeans_3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" ₹120"
+                                android:textSize="15dp"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/text_denimjeans_3" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent">
+
+                                <ImageView
+                                    android:id="@+id/image_minus_denimjeans_3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/iconsubtractmath"
+                                    android:onClick="MinusJeans3"/>
+                                <TextView
+                                    android:id="@+id/number_denimjeans_3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="0"
+                                    android:layout_marginRight="40dp"
+                                    android:layout_marginLeft="40dp"
+                                    android:textSize="25dp"/>
+                                <ImageView
+                                    android:id="@+id/image_plus_denimjeans_3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/iconplusmath"
+                                    android:onClick="PlusJeans3"/>
+
+                            </LinearLayout>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="1dp"
+                            android:layout_marginBottom="1dp">
+
+                            <TextView
+                                android:id="@+id/text_formalsuit_3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="FORMAL SUIT"
+                                android:textSize="20dp"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintLeft_toLeftOf="parent"/>
+
+                            <TextView
+                                android:id="@+id/cost_formalsuit_3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" ₹120"
+                                android:textSize="15dp"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/text_formalsuit_3" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent">
+
+                                <ImageView
+                                    android:id="@+id/image_minus_formalsuit_3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/iconsubtractmath"
+                                    android:onClick="MinusSuit3"/>
+                                <TextView
+                                    android:id="@+id/number_formalsuit_3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="0"
+                                    android:layout_marginRight="40dp"
+                                    android:layout_marginLeft="40dp"
+                                    android:textSize="25dp"/>
+                                <ImageView
+                                    android:id="@+id/image_plus_formalsuit_3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/iconplusmath"
+                                    android:onClick="PlusSuit3"/>
+
+                            </LinearLayout>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="1dp"
+                            android:layout_marginBottom="1dp">
+
+                            <TextView
+                                android:id="@+id/text_saree_3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="SAREE"
+                                android:textSize="20dp"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintLeft_toLeftOf="parent"/>
+
+                            <TextView
+                                android:id="@+id/cost_saree_3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" ₹120"
+                                android:textSize="15dp"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/text_saree_3" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent">
+
+                                <ImageView
+                                    android:id="@+id/image_minus_saree_3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/iconsubtractmath"
+                                    android:onClick="MinusSaree3"/>
+                                <TextView
+                                    android:id="@+id/number_saree_3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="0"
+                                    android:layout_marginRight="40dp"
+                                    android:layout_marginLeft="40dp"
+                                    android:textSize="25dp"/>
+                                <ImageView
+                                    android:id="@+id/image_plus_saree_3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/iconplusmath"
+                                    android:onClick="PlusSaree3"/>
+
+                            </LinearLayout>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@android:color/darker_gray"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+   <LinearLayout
+       android:id="@+id/linearLayoutNeeche"
+       android:layout_width="match_parent"
+       android:layout_height="70dp"
+       android:background="#e6e6e6"
+       android:paddingLeft="10dp"
+       android:paddingRight="5dp"
+       app:layout_constraintTop_toBottomOf="@+id/constraintLayoutUpar"
+       app:layout_constraintLeft_toLeftOf="parent"
+       app:layout_constraintRight_toRightOf="parent"
+       app:layout_constraintBottom_toBottomOf="parent"
+       android:orientation="horizontal">
+
+       <LinearLayout
+           android:layout_width="wrap_content"
+           android:layout_height="match_parent"
+           android:orientation="vertical">
+
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal">
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Items: "
+                   android:textSize="25sp"
+                   android:textColor="#000000"/>
+
+               <TextView
+                   android:id="@+id/numberofitems"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="0"
+                   android:textSize="25sp"
+                   android:textColor="#000000"/>
+
+           </LinearLayout>
+
+
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal">
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Total cost: ₹"
+                   android:textSize="25sp"
+                   android:textColor="#000000"/>
+
+               <TextView
+                   android:id="@+id/totalcost"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="0"
+                   android:textSize="25sp"
+                   android:textColor="#000000"/>
+
+           </LinearLayout>
+
+       </LinearLayout>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layout_gravity="center"
+           android:gravity="center"
+           android:orientation="horizontal">
+
+
+           <Button
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:layout_gravity="center"
+               android:layout_marginRight="5dp"
+               android:layout_marginLeft="65dp"
+               android:layout_marginTop="5dp"
+               android:layout_marginBottom="5dp"
+               android:gravity="center"
+               android:background="#333333"
+               android:textColor="#ffffff"
+               android:text="proceed"
+               android:textSize="20sp"/>
+
+
+       </LinearLayout>
+
+
+
+
+
+
+   </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

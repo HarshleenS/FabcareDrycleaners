@@ -167,6 +167,7 @@ public class GetOtpPage extends AppCompatActivity {
                                 storeNewUserData();
                                 Toast.makeText(GetOtpPage.this, "Successfully registered", Toast.LENGTH_SHORT).show();
                                 startActivity(new Intent(getApplicationContext(), HomePage.class));
+                                overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
                             //}
 
 
@@ -203,6 +204,7 @@ public class GetOtpPage extends AppCompatActivity {
     public void goBackToRegPage(View view){
         Intent i = new Intent(getApplicationContext(), RegisterPage.class);
         startActivity(i);
+        overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
         finish();
     }
 }

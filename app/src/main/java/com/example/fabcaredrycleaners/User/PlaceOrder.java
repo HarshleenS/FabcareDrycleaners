@@ -23,6 +23,7 @@ public class PlaceOrder extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getApplicationContext(), HomePage.class));
+                overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
             }
         });
     }
